@@ -1,0 +1,53 @@
+================================================================================
+MEETING FILES ORGANIZATION - QUICK START GUIDE
+================================================================================
+
+FASTEST WAY TO ORGANIZE A FOLDER:
+  organize-all-meetings.cmd "C:\path\to\folder"
+
+BREAKDOWN OF COMMANDS:
+  
+  1. Rename generic Zoom/Google Calendar meetings:
+     rename-meetings.cmd "folder"
+  
+  2. Organize into Project/Engineer folders:
+     organize-meetings.cmd "folder"
+  
+  3. Do both in one command:
+     organize-all-meetings.cmd "folder"
+
+ADVANCED OPTIONS:
+
+  - Only rename, don't organize:
+    organize-all-meetings.cmd "folder" --rename-only
+  
+  - Only organize (skip renaming):
+    organize-all-meetings.cmd "folder" --organize-only
+  
+  - Preview folder structure before organizing:
+    .\Organize-MeetingFiles-Preview.ps1 -FolderPath "folder"
+
+EXAMPLE - Organize downloads folder:
+  organize-all-meetings.cmd "c:\Baires\zoom_vtt_download\downloads"
+
+EXAMPLE - Organize external drive:
+  organize-all-meetings.cmd "D:\MyMeetings"
+
+WHAT HAPPENS:
+  ✓ Generic "Zoom_Meeting.txt" files renamed with participants
+  ✓ Files organized into PROJECT folders
+  ✓ Subfolders created for each ENGINEER
+  ✓ Special meetings go to General folder
+  ✓ Final result: PROJECT\ENGINEER\meeting_file.txt
+
+REQUIREMENTS:
+  ✓ All .cmd files in same directory as .ps1 scripts
+  ✓ Windows PowerShell 5.1+
+  ✓ Meeting files must be .txt VTT transcripts
+
+QUESTIONS?
+  See BATCH-COMMANDS.md for complete documentation
+  See README-RENAME.md for rename details
+  See ORGANIZATION-COMPLETE.md for previous results
+
+================================================================================
